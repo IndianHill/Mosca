@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>1081430382071-th01l8r5v2hl5rt99g8ghointc4hj5vb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1081430382071-th01l8r5v2hl5rt99g8ghointc4hj5vb</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDe2kMVGoN_y0-yFqS_dsY_JJK4fWUYYfg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1081430382071</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.unitedwebspace.airline</string>
+	<key>PROJECT_ID</key>
+	<string>airline-23bfe</string>
+	<key>STORAGE_BUCKET</key>
+	<string>airline-23bfe.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1081430382071:ios:8f0e188e8ab6d717</string>
+	<key>DATABASE_URL</key>
+	<string>https://airline-23bfe.firebaseio.com</string>
+</dict>
+</plist>
