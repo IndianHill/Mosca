@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>airline</string>
+	<string>Mosca</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -26,19 +26,33 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.googleusercontent.apps.1081430382071-th01l8r5v2hl5rt99g8ghointc4hj5vb</string>
+			<string>428128919299-4notc9ijm0a0qiae1kuk6j514kp7d45d.apps.googleusercontent.com</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>twitterkit-D6l3q7JN7BvaxQIPiTLkWvqSB</string>
-				<string>fb348171055656471</string>
-				<string>com.googleusercontent.apps.1081430382071-th01l8r5v2hl5rt99g8ghointc4hj5vb com.googleusercontent.apps.1081430382071-th01l8r5v2hl5rt99g8ghointc4hj5vb</string>
+				<string>com.googleusercontent.apps.428128919299-4notc9ijm0a0qiae1kuk6j514kp7d45d</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1788602697830227</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>twitterkit-etLkC3zfjoc3i3m6m7kvOFEkk</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>348171055656471</string>
+	<string>1788602697830227</string>
 	<key>FacebookDisplayName</key>
 	<string>Air Line</string>
 	<key>LSApplicationQueriesSchemes</key>

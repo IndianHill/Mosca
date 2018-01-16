@@ -11,5 +11,9 @@ export default {
   footer: {
     backgroundColor: 'transparent',
     borderColor: 'transparent'
+  },
+  logoutText: {
+    marginTop: 100,
+    marginLeft: 20,
   }
 }

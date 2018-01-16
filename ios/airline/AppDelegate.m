@@ -16,8 +16,8 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <RNGoogleSignin/RNGoogleSignin.h>
 
-#define FACEBOOK_SCHEME  @"fb348171055656471"
-#define TWITTER_SCHEME  @"twitterkit-D6l3q7JN7BvaxQIPiTLkWvqSB"
+#define FACEBOOK_SCHEME  @"fb1788602697830227"
+#define TWITTER_SCHEME  @"twitterkit-etLkC3zfjoc3i3m6m7kvOFEkk"
 #define MY_GOOGLE_SIGNIN_SCHEME  @"com.googleusercontent.apps.1081430382071-th01l8r5v2hl5rt99g8ghointc4hj5vb"
 
 @implementation AppDelegate

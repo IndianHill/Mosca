@@ -8,14 +8,14 @@ import DrawerContent from "../Containers/DrawerContent";
 import styles from "./Styles/NavigationStyles";
 
 const NavigationDrawer = DrawerNavigator({
-  		HomeScreen: { screen: HomeScreen },
-		ListviewExample: { screen: ListviewExample },
-		CardExample: { screen: CardExample },
-	},
-	{
-		initialRouteName: "HomeScreen",
-		contentComponent: props => <DrawerContent {...props} />,
-	}
+    HomeScreen: { screen: HomeScreen },
+    ListviewExample: { screen: ListviewExample },
+    CardExample: { screen: CardExample },
+  },
+  {
+    initialRouteName: "HomeScreen",
+    contentComponent: props => <DrawerContent {...props} />,
+  }
 );
 
 export default NavigationDrawer;

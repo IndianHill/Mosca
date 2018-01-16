@@ -46,3 +46,15 @@ export function * googleLogin (api) {
     yield put(LoginActions.loginFailure('WRONG'))
   }
 }
+
+export function * phoneLogin (api) {
+  // make the call to the api
+  const response = yield call(api.phoneLogin)
+
+  if (response.status) {
+    // do data conversion here if needed
+    yield put(LoginActions.loginSuccess(response.user));
+  } else {
+    yield put(LoginActions.loginFailure('WRONG'))
+  }
+}

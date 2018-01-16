@@ -26,8 +26,7 @@ class LoginScreen extends React.Component {
 	}
 
 	componentWillReceiveProps(newProps) {
-		const {user} = newProps.login;
-		const {fetching} = newProps.login;
+	  const {user, fetching} = newProps.login;
 		this.isAttempting = fetching;
 		if(user){
 			this.props.navigation.navigate('NavigationDrawer');
@@ -52,6 +51,11 @@ class LoginScreen extends React.Component {
 		this.props.attemptGoogleLogin();
 	}
 
+	onPhoneLogin() {
+		// this.props.navigation.navigate('InputPhoneNumber');
+		// this.props.attemptPhoneLogin();
+	}
+
 	render() {
 		return (
 		  <ImageBackground source={Images.background} style={Styles.bg}>
@@ -67,7 +71,7 @@ class LoginScreen extends React.Component {
 				<IconFontAwesome name="facebook" style={Styles.icon} onPress={()=>this.onFacebookLogin()} />
 				<IconFontAwesome name="twitter" style={Styles.icon} onPress={()=>this.onTwitterLogin()} />
 				<IconFontAwesome name="google" style={Styles.icon} onPress={()=>this.onGoogleLogin()} />
-				<IconFontAwesome name="phone" style={Styles.icon} />
+				{/* <IconFontAwesome name="phone" style={Styles.icon} onPress={()=>this.onPhoneLogin()}/> */}
 			</View>
 		  </ImageBackground>
 		);
@@ -84,7 +88,8 @@ const mapDispatchToProps = dispatch => {
 	return {
 		attemptTwitterLogin: () => dispatch(LoginActions.twitterLoginRequest()),
 		attemptFacebookLogin: () => dispatch(LoginActions.facebookLoginRequest()),
-		attemptGoogleLogin: () => dispatch(LoginActions.googleLoginRequest())
+		attemptGoogleLogin: () => dispatch(LoginActions.googleLoginRequest()),
+		attemptPhoneLogin: () => dispatch(LoginActions.phoneLoginRequest())
 	};
 };
 

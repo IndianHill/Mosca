@@ -20,6 +20,7 @@ const images = {
 	chevronRight: require("../Images/Icons/chevron-right.png"),
 	hamburger: require("../Images/Icons/hamburger.png"),
 	backButton: require("../Images/Icons/back-button.png"),
+	nextButton: require("../Images/Icons/next-button.png"),
 	closeButton: require("../Images/Icons/close-button.png"),
 };
 

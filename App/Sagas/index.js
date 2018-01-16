@@ -13,7 +13,7 @@ import { AirLineTypes } from '../Redux/AirLineRedux'
 /* ------------- Sagas ------------- */
 
 import { startup } from './StartupSagas'
-import { login, twitterLogin, facebookLogin, googleLogin } from './LoginSagas'
+import { login, twitterLogin, facebookLogin, googleLogin, phoneLogin } from './LoginSagas'
 import { getUserAvatar } from './GithubSagas'
 import { getAirLines } from './AirLineSagas'
 
@@ -33,6 +33,7 @@ export default function * root () {
     takeLatest(LoginTypes.TWITTER_LOGIN_REQUEST, twitterLogin, api),
     takeLatest(LoginTypes.FACEBOOK_LOGIN_REQUEST, facebookLogin, api),
     takeLatest(LoginTypes.GOOGLE_LOGIN_REQUEST, googleLogin, api),
+    takeLatest(LoginTypes.PHONE_LOGIN_REQUEST, phoneLogin, api),
     takeLatest(AirLineTypes.GET_AIR_LINES_REQUEST, getAirLines, api),
     // some sagas receive extra parameters in addition to an action
     //takeLatest(GithubTypes.USER_REQUEST, getUserAvatar, api)

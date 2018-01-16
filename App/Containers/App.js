@@ -8,7 +8,15 @@ import Config from 'react-native-config';
 
 // create our store
 const store = createStore()
-
+const fbconfig = {
+  apiKey: Config.apiKey,
+  authDomain: Config.authDomain,
+  databaseURL: Config.databaseURL,
+  projectId: Config.projectId,
+  storageBucket: Config.storageBucket,
+  messagingSenderId: Config.messagingSenderId
+};
+export const FBApp = firebase.initializeApp(fbconfig);
 /**
  * Provides an entry point into our application.  Both index.ios.js and index.android.js
  * call this component first.
@@ -20,15 +28,7 @@ const store = createStore()
  */
 class App extends Component {
   componentWillMount() {
-    const fbconfig = {
-      apiKey: Config.apiKey,
-      authDomain: Config.authDomain,
-      databaseURL: Config.databaseURL,
-      projectId: Config.projectId,
-      storageBucket: Config.storageBucket,
-      messagingSenderId: Config.messagingSenderId
-    };
-    firebase.initializeApp(fbconfig);
+    
   }
   render () {
     return (

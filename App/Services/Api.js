@@ -76,7 +76,7 @@ const create = (baseURL = 'https://api.github.com/') => {
       });
     });
   }
-  
+
   const facebookLogin = () => {
     const FBSDK = require('react-native-fbsdk');
     const {
@@ -127,49 +127,57 @@ const create = (baseURL = 'https://api.github.com/') => {
   const googleLogin = () => {
     return new Promise((resolve, reject) => {
       GoogleSignin.configure({
-        //iosClientId: Config.GoogleIosClientID
-        iosClientId: '1081430382071-th01l8r5v2hl5rt99g8ghointc4hj5vb.apps.googleusercontent.com'
+        // iosClientId: '1081430382071-th01l8r5v2hl5rt99g8ghointc4hj5vb.apps.googleusercontent.com'
+        iosClientId: '428128919299-4notc9ijm0a0qiae1kuk6j514kp7d45d.apps.googleusercontent.com',
+        // androidClientId: '428128919299-n4cba7nrimul3je985i8qgeojdj4g2ck.apps.googleusercontent.com'
+        // androidClientId: '428128919299-gpr9kdr82e78v2baj1g49ph72hudjstb.apps.googleusercontent.com',
+        webClientId: '428128919299-2hekg9tu97fjqts6nngin9b8auankmf8.apps.googleusercontent.com'
       })
       .then(() => {
-        
         GoogleSignin.signIn()
         .then((user) => {
           console.log(user);
+          GoogleSignin.currentUserAsync()
+            .then((user) => {
+              console.log(user);
+              var accessToken = firebase.auth.GoogleAuthProvider.credential(user.idToken);
+              firebase.auth().signInWithCredential(accessToken)
+                .then(function(res){
+                  console.log(res);
+                  const user = firebase.auth().currentUser;
+                  let userinfo = {
+                    phoneNumber: user.phoneNumber,
+                    displayName: user.displayName,
+                    email: user.email,
+                    photoURL: user.photoURL
+                  };
+                  return resolve({status: true, user: userinfo});
+                })
+                .catch(function(error) {
+                  console.log(error);
+                  return resolve({status: false});
+                });
+            })
+            .catch((err) => {
+              console.log(err);
+              return resolve({status: false});
+            })
         })
         .catch((err) => {
           console.log('WRONG SIGNIN', err);
-        })
-        // GoogleSignin.currentUserAsync()
-        // .then((user) => {
-        //   console.log(user);
-        //   var accessToken = firebase.auth.GoogleAuthProvider.credential(token);
-        //   firebase.auth().signInWithCredential(accessToken)
-        //   .then(function(res){
-        //     console.log(res);
-        //     const user = firebase.auth().currentUser;
-        //     console.log(user);
-        //     return resolve({status: true, user: user});
-        //   })
-        //   .catch(function(error) {
-        //     console.log(error);
-        //     return resolve({status: false});
-        //   });
-        // })
-        // .catch((err) => {
-        //   console.log(err);
-        //   return resolve({status: false});
-        // })
+
+        });
       })
-      .catch(function(error) {
+      .catch(function(error) { alert(error)
         console.log(error);
         return resolve({status: false});
-      });
-    });
+      })
+    })
   }
 
   const phoneLogin = () => {
     return new Promise((resolve, reject) => {
-      firebase.auth().useDeviceLanguage();
+      // firebase.auth().useDeviceLanguage();
     });
   }
 
@@ -206,6 +214,7 @@ const create = (baseURL = 'https://api.github.com/') => {
     twitterLogin,
     facebookLogin,
     googleLogin,
+    phoneLogin,
     getAirLines,
   }
 }
